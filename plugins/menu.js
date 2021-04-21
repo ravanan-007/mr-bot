@@ -37,7 +37,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let tags = {
       'main': 'Main',
-      'game': 'Game',
       'xp': 'Exp & Limit',
       'sticker': 'Sticker',
       'kerang': 'Kerang Ajaib',
@@ -79,19 +78,11 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ╭─「 ${conn.user.name} 」
-│ Hai, %name!
+│ Hai, FRIENDS
+│INSTAGRAM : https://instagram.com/__mr_ravanan?igshid=4garzfgpmr57
+│YOUTUBE :  https://youtube.com/channel/UCzmR66qTS65JUNNmFplCMNg
 │
-│ Tersisa *%limit Limit*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
+│ 😝 support 🥳
 ╰────
 %readmore`
     let header = conn.menu.header || '╭─「 %category 」'
